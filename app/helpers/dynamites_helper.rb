@@ -1,0 +1,2 @@
+module DynamitesHelper
+end

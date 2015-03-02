@@ -1,0 +1,21 @@
+<h1>The Launching Pad</h1>
+
+    <% @dynamites.each do |dynamite| %>
+      
+      <div class="panel panel-default">
+				<div class="panel-body">
+					
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<%= dynamite.content %> 
+					
+				</div>
+				<div class="panel-footer">sent by <%= dynamite.user.email %><%= link_to "<i class='fa fa-trash-o'></i>", dynamite, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+			</div>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Dynamite', new_dynamite_path %>
