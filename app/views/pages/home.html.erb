@@ -1,7 +1,11 @@
 <div class="jumbotron">
-  <div class="container">
 		<h1>Put them on Blast</h1>
-		<p>The greatest and latest Twitter clone ever created by the one and only <a href="http://github.com/shelbsimone/bullhorn.git">shelbsimone</a></p>
-		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-  </div>
+		<p>The greatest and latest Twitter clone ever created by the one and only <a href="http://github.com/shelbsimone/bullhorn.git">shelbsimone</a>				<% if current_user %>
+			
+			<%= link_to "Drop Blasts", new_dynamite_path, class: "btn btn-primary btn-lg" %>
+			
+				<% else %>
+			
+		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  <% end %>
 </div>

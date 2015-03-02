@@ -23,7 +23,7 @@ class DynamitesController < ApplicationController
 
   def create
     @dynamite = Dynamite.new(dynamite_params)
-		@dynamite.user_id=current_user.id
+		@dynamite.user_id = current_user.id
     @dynamite.save
     respond_with(@dynamite)
   end
